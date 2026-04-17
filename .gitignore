@@ -1,0 +1,33 @@
+# Logs
+
+logs/*
+!logs/.gitkeep
+
+# Backup files (your project generated)
+
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+
+# Temp files
+
+*.tmp
+*.swp
+*~
+
+# System files
+
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+
+.env
+.env.*
+
+# Output files
+
+*.log
+*.out
+
