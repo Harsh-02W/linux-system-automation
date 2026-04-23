@@ -114,23 +114,23 @@ sudo bash backup/backup_logs.sh
 
 ```bash
 # Run a disk check now
-bash monitoring/disk_check.sh
+sudo bash monitoring/disk_check.sh
 
 # Check CPU and memory
-bash monitoring/cpu_memory_check.sh
+sudo bash monitoring/cpu_memory_check.sh
 
 # Generate a health report
-bash monitoring/health_report.sh
+sudo bash monitoring/health_report.sh
 ```
 
 ### Log Management
 
 ```bash
 # Rotate and compress logs
-bash log-management/rotate_logs.sh
+sudo bash log-management/rotate_logs.sh
 
 # Clean up old logs
-bash log-management/cleanup_old_logs.sh
+sudo bash log-management/cleanup_old_logs.sh
 ```
 
 ---
