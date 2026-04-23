@@ -1,33 +1,37 @@
-# Logs
+# ─────────────────────────────────────────────────────────────────────────────
+# .gitignore — Linux System Automation
+# ─────────────────────────────────────────────────────────────────────────────
 
-logs/*
-!logs/.gitkeep
+# ── Runtime logs (generated at runtime, not source code) ─────────────────────
+logs/
+*.log
+*.log.gz
 
-# Backup files (your project generated)
-
-*.tar
+# ── Backup archives (can be huge, belong on the server not in git) ────────────
+/var/backups/
 *.tar.gz
 *.tar.bz2
 *.zip
 
-# Temp files
+# ── Health reports (generated output, not source) ────────────────────────────
+monitoring/reports/
+health_report_*.txt
 
-*.tmp
-*.swp
-*~
+# ── Sensitive config overrides (if you ever make a local settings override) ───
+config/settings.local.conf
+config/*.secret
 
-# System files
+# ── Bulk provisioning CSVs (contain usernames/passwords — keep off git) ───────
+*.csv
+users*.txt
 
+# ── OS clutter ────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
 
-# Env / secrets
-
-.env
-.env.*
-
-# Output files
-
-*.log
-*.out
-
+# ── Editor/IDE clutter ────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
